@@ -1,32 +1,36 @@
 ---
-name: "Проверка товаров"
-description: "Инструмент для работы с каталогом товаров: проверка названий, категорий, цен и штрихкодов"
+name: check-products
+description: "Инструмент для проверки товаров"
+version: 1.0.2               # Игнорируется Claude, полезно для CI/CD
+author: "Mimikkai"           # Игнорируется Claude
+license: MIT
+allowed-tools: [lua]
+
+metadata:
+  columns:
+    A:
+      label: "Название"
+      description: "Наименование товара"
+      field_type: "STRING"
+      is_required: true
+      read_only: false
+    B:
+      label: "Категория"
+      description: "Категория товара"
+      field_type: "STRING"
+      is_required: true
+      read_only: false
+    C:
+      label: "Цена"
+      description: "Цена товара в рублях"
+      field_type: "NUMBER"
+      is_required: true
+      read_only: false
 ---
 
 ```lua
-columns = {
-    A = {
-        label = "Название",
-        description = "Наименование товара",
-        field_type = "STRING",
-        is_required = true,
-        read_only = false
-    },
-    B = {
-        label = "Категория",
-        description = "Категория товара",
-        field_type = "STRING",
-        is_required = true,
-        read_only = false
-    },
-    C = {
-        label = "Цена",
-        description = "Цена товара в рублях",
-        field_type = "NUMBER",
-        is_required = true,
-        read_only = false
-    }
-}
+-- Допустим, весь frontmatter доступен в переменной `meta`
+local cols = meta.metadata.columns
 ```
 
 Проанализируй строку из каталога продуктов.
