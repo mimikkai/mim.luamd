@@ -28,6 +28,12 @@ mim:
       read_only: false
 ---
 
+```toon
+# entry (данные для AI-агента, которые можно передать в TOON)
+entry[1]{A,B,C}:
+  Яблокофон,Телефоны,50000
+```
+
 ```lua
 -- Получается данные колонок mim
 local cols = mim.columns
