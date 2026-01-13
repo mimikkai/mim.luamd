@@ -1,11 +1,11 @@
 ---
 name: check-products
 description: "Инструмент для проверки товаров"
-version: 1.0.2               # Игнорируется Claude, полезно для CI/CD
-author: "Mimikkai"           # Игнорируется Claude
 license: MIT
 allowed-tools: [lua]
-
+metadata:
+  author: example-org
+  version: "1.0"
 mim:
   columns:
     A:
