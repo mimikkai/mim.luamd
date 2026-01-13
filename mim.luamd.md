@@ -27,6 +27,10 @@ mim:
       is_required: true
       read_only: false
 ---
+```toon
+entry[1]{A,B,C}:
+  Яблокофон,Телефоны,50000
+```
 
 ```lua
 -- Получается данные колонок mim
