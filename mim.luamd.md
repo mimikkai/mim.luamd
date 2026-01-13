@@ -6,7 +6,7 @@ author: "Mimikkai"           # Игнорируется Claude
 license: MIT
 allowed-tools: [lua]
 
-metadata:
+mim:
   columns:
     A:
       label: "Название"
@@ -30,7 +30,7 @@ metadata:
 
 ```lua
 -- Допустим, весь frontmatter доступен в переменной `meta`
-local cols = meta.metadata.columns
+local cols = mim.columns
 ```
 
 Проанализируй строку из каталога продуктов.
