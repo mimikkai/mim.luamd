@@ -2,7 +2,7 @@
 name: check-products
 description: "Инструмент для проверки товаров"
 license: MIT
-allowed-tools: [lua]
+allowed-tools: [toon,lua]
 metadata:
   author: example-org
   version: "1.0"
