@@ -1,12 +1,12 @@
 ---
 name: check-products
 description: "Инструмент для проверки товаров"
-version: 1.0.2               # Игнорируется Claude, полезно для CI/CD
-author: "Mimikkai"           # Игнорируется Claude
 license: MIT
 allowed-tools: [lua]
-
 metadata:
+  author: example-org
+  version: "1.0"
+mim:
   columns:
     A:
       label: "Название"
@@ -29,8 +29,13 @@ metadata:
 ---
 
 ```lua
--- Допустим, весь frontmatter доступен в переменной `meta`
-local cols = meta.metadata.columns
+-- Получается данные колонок mim
+local cols = mim.columns
+
+--- Какой-нибудь код который обрабатывает cols
+--- Обработка будет производиться когда произойдет вызов кода в этом блоке
+
+
 ```
 
 Проанализируй строку из каталога продуктов.
