@@ -1,7 +1,7 @@
 # mim.lua
 
 ```
--- mim.lua — MimikkAI инструментальный модуль
+-- mim.lua — MimikkAI инструментальный модуль (MimikkAI instrumental module)
 
 --- Таблица-описание инструмента
 
